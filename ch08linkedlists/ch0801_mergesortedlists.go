@@ -1,5 +1,10 @@
 package ch08linkedlists
 
+// MergeTwoSortedList merges two sorted lists
+// newNode is created for placeholder for a result
+// Time complexity is O(n+m) where n and m are for l1 and l2 respectively
+// In the best case, one list is much shorter
+// The space complexity is O(1) since we use the existing nodes
 func MergeTwoSortedList(l1 *ListNode, l2 *ListNode) *ListNode {
 	newNode := &ListNode{}
 	current := newNode
