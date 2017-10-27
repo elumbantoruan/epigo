@@ -10,9 +10,6 @@ type TreeNode struct {
 	Right	*TreeNode
 }
 
-var listPreOrder []int
-var listInOrder []int
-
 // Insert inserts the node
 func (t *TreeNode) Insert(v int) {
 	if v < t.Value {
@@ -43,25 +40,37 @@ func (t TreeNode) PrintInOrder() {
 }
 
 func (t TreeNode) ToInOrderList() []int {
+	var list []int
+	list = t.toInOrderList(list)
+	return list
+}
+
+func (t TreeNode) toInOrderList(list []int) []int{
 	if t.Left != nil {
-		t.Left.ToInOrderList()
+		list = t.Left.toInOrderList(list)
 	}
-	listInOrder = append(listInOrder, t.Value)
+	list = append(list, t.Value)
 	if t.Right != nil {
-		t.Right.ToInOrderList()
+		list = t.Right.toInOrderList(list)
 	}
-	return listInOrder
+	return list
 }
 
 func (t TreeNode) ToPreOrderList() []int {
-	listPreOrder = append(listPreOrder, t.Value)
+	list := []int{}
+	list = t.toPreOrderList(list)
+	return list
+}
+
+func (t TreeNode) toPreOrderList(list []int) []int {
+	list = append(list, t.Value)
 	if t.Left != nil {
-		t.Left.ToPreOrderList()
+		list = t.Left.toPreOrderList(list)
 	}
 	if t.Right != nil {
-		t.Right.ToPreOrderList()
+		list = t.Right.toPreOrderList(list)
 	}
-	return listPreOrder
+	return list
 }
 
 const (
