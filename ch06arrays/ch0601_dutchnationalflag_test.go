@@ -29,3 +29,31 @@ func TestDutchNationalFlag(t *testing.T) {
 		fmt.Printf("%v\n", c)
 	}
 }
+
+func TestDutchNationalFlagWithoutPivot(t *testing.T) {
+	colors := []Color {
+		Blue,
+		Red,
+		Red,
+		Blue,
+		White,
+		Red,
+		White,
+	}
+
+	DutchNationalFlagWithoutPivot(colors)
+
+	expected := []Color{
+		Red,
+		Red,
+		Red,
+		White,
+		White,
+		Blue,
+		Blue,
+	}
+
+	for i, e := range colors {
+		assert.Equal(t, expected[i], e)
+	}
+}
