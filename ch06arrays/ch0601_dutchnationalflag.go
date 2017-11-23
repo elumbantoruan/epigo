@@ -9,25 +9,49 @@ package ch06arrays
 // unclassified: A sublist (equal, larger)
 // top: A sublist(larger, A.Count)
 func DutchNationalFlag(colors []Color, pivotIndex int) {
-	smaller := 0
-	equal := 0
-	larger := len(colors) -1
+	i := 0
+	j := 0
+	n := len(colors) -1
 
 	pivot := colors[pivotIndex]
 
-	for equal <= larger {
-		if colors[equal] < pivot {
-			// swap
-			colors[smaller], colors[equal] = colors[equal], colors[smaller]
-			smaller++
-			equal++
-		} else if colors[equal] == pivot {
-			equal++
+	for j <= n {
+		if colors[j] < pivot {
+			swap(colors, i, j)
+			i++
+			j++
+		} else if colors[j] == pivot {
+			j++
 		} else {  // colors[equal] > pivot
-			colors[equal], colors[larger] = colors[larger], colors[equal]
-			larger--
+			swap(colors, j, n)
+			n--
 		}
 	}
+}
+
+// DutchNationalFlagWithoutPivot sorts the array into three partition
+func DutchNationalFlagWithoutPivot(colors []Color) {
+	i := 0
+	j := 0
+	n := len(colors) - 1
+
+	for j < n {
+		if colors[j] == Red {
+			swap(colors,i,j)
+			i++
+			j++
+		} else if colors[j] == White {
+			j++
+		} else if colors[j] == Blue {
+			swap(colors, j, n)
+			n--
+		}
+	}
+
+}
+
+func swap(colors []Color, a, b int) {
+	colors[a], colors[b] = colors[b], colors[a]
 }
 
 type Color int
