@@ -1,12 +1,12 @@
 package ch08linkedlists
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestRemoveKthLastElement(t *testing.T) {
-	arr := []interface{} {1,2,3,4,5,6,7,8}
+	arr := []interface{}{1, 2, 3, 4, 5, 6, 7, 8}
 	l := FromArray(arr)
 	l.Print()
 

@@ -1,7 +1,7 @@
 package ch15binarysearchtree
 
 type Interval struct {
-	Left int
+	Left  int
 	Right int
 }
 
@@ -27,4 +27,3 @@ func rangeLookup(tree *TreeNode, interval Interval, results []int) {
 		rangeLookup(tree.Right, interval, results)
 	}
 }
-

@@ -1,8 +1,8 @@
 package ch14sorting
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestMergingInterval(t *testing.T) {
@@ -14,15 +14,15 @@ func TestMergingInterval(t *testing.T) {
 		{11, 12},
 		{14, 17},
 	}
-	newInterval := Interval{1,8}
+	newInterval := Interval{1, 8}
 
 	results := MergingInterval(existingIntervals, newInterval)
 	//assert.True(t, results != nil)
-	expected := []*Interval {
-		{-4,-1},
-		{0,9},
-		{11,12},
-		{14,17},
+	expected := []*Interval{
+		{-4, -1},
+		{0, 9},
+		{11, 12},
+		{14, 17},
 	}
 	for i, m := range results {
 		assert.Equal(t, expected[i], m)

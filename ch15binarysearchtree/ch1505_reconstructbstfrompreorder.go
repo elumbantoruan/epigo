@@ -34,8 +34,8 @@ func reconstructBSTFromPreOrder(list []int, start, end int) *TreeNode {
 			break
 		}
 	}
-	root := &TreeNode{Value:list[start]}
-	root.Left = reconstructBSTFromPreOrder(list, start + 1, transpoint)
+	root := &TreeNode{Value: list[start]}
+	root.Left = reconstructBSTFromPreOrder(list, start+1, transpoint)
 	root.Right = reconstructBSTFromPreOrder(list, transpoint, end)
 
 	return root

@@ -10,9 +10,9 @@ func IntegerToString(n int) string {
 	for i := 0; i < len; i++ {
 		chars = append(chars, ' ')
 	}
-	idx := len -1
+	idx := len - 1
 	for n > 0 {
-		chars[idx] = rune(n % 10 + '0')
+		chars[idx] = rune(n%10 + '0')
 		n /= 10
 		idx--
 	}
@@ -23,7 +23,7 @@ func IntegerToString(n int) string {
 func StringToInteger(s string) int {
 	result := 0
 	for i := 0; i < len(s); i++ {
-		result = result * 10 + int(s[i] - '0')
+		result = result*10 + int(s[i]-'0')
 	}
 	return result
 }

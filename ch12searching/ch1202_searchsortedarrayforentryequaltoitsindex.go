@@ -9,7 +9,7 @@ func SearchSortedArrayForEntryEqualToIndex(numbers []int) int {
 	ceiling := len(numbers) - 1
 
 	for floor <= ceiling {
-		mid := floor + (ceiling - floor) / 2
+		mid := floor + (ceiling-floor)/2
 		if numbers[mid] == mid {
 			return mid
 		} else if numbers[mid] > mid {

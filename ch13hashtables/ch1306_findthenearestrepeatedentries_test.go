@@ -1,8 +1,8 @@
 package ch13hashtables
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestFindTheNearestRepeatedEntries(t *testing.T) {

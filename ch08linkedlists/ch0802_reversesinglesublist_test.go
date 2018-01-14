@@ -1,9 +1,9 @@
 package ch08linkedlists
 
 import (
-	"testing"
-	"github.com/stretchr/testify/assert"
 	"fmt"
+	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 // TestReverseSubList reverses the nodes from the start and finish index of nodes
@@ -13,10 +13,10 @@ import (
 func TestReverseSubList(t *testing.T) {
 	node := new(ListNode)
 	node.Value = 11
-	node.Next = &ListNode{Value:3}
-	node.Next.Next = &ListNode{Value:5}
-	node.Next.Next.Next = &ListNode{Value:7}
-	node.Next.Next.Next.Next = &ListNode{Value:2}
+	node.Next = &ListNode{Value: 3}
+	node.Next.Next = &ListNode{Value: 5}
+	node.Next.Next.Next = &ListNode{Value: 7}
+	node.Next.Next.Next.Next = &ListNode{Value: 2}
 
 	start := 2
 	finish := 4
@@ -29,7 +29,7 @@ func TestReverseSubList(t *testing.T) {
 	fmt.Println("TestReverseSubList output:")
 	reversed.Print()
 
-	expected := []interface{} {11, 7, 5, 3, 2}
+	expected := []interface{}{11, 7, 5, 3, 2}
 	actual := reversed.ToArray()
 
 	assert.True(t, len(expected) == len(actual))

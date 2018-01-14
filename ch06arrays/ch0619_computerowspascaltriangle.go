@@ -14,7 +14,7 @@ func ComputeRowsPascalTriangle(n int) [][]int {
 			if j == 0 || j == i {
 				row = append(row, 1)
 			} else {
-				val := results[i - 1][j -1] + results[i - 1][j]
+				val := results[i-1][j-1] + results[i-1][j]
 				row = append(row, val)
 			}
 		}

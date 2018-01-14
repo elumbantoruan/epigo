@@ -1,8 +1,8 @@
 package ch12searching
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestSearchForFirstOccurenceOfK(t *testing.T) {

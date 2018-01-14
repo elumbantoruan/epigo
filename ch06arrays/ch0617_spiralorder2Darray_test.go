@@ -1,8 +1,8 @@
 package ch06arrays
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 // MatrixInSpiralOrder returns a list of integer
@@ -18,10 +18,10 @@ import (
 //
 func TestMatrixInSpiralOrder(t *testing.T) {
 	var matrix [][]int
-	row1 := []int {1,2,3,4}
-	row2 := []int {5,6,7,8}
-	row3 := []int {9,10,11,12}
-	row4 := []int {13,14,15,16}
+	row1 := []int{1, 2, 3, 4}
+	row2 := []int{5, 6, 7, 8}
+	row3 := []int{9, 10, 11, 12}
+	row4 := []int{13, 14, 15, 16}
 
 	matrix = append(matrix, row1)
 	matrix = append(matrix, row2)
@@ -29,7 +29,7 @@ func TestMatrixInSpiralOrder(t *testing.T) {
 	matrix = append(matrix, row4)
 
 	spiral := MatrixInSpiralOrder(matrix)
-	expected := []int { 1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10 }
+	expected := []int{1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10}
 
 	assert.Equal(t, len(expected), len(spiral))
 	for i, n := range spiral {

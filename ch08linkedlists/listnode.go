@@ -21,7 +21,7 @@ func (l *ListNode) Print() {
 }
 
 // ToArray converts the nodes of ListNode into an array (interface{})
-func (l *ListNode) ToArray() ([]interface{}) {
+func (l *ListNode) ToArray() []interface{} {
 	var values []interface{}
 	p := l
 	for p != nil {
@@ -53,18 +53,18 @@ func (l *ListNode) AdvanceNode(n int) *ListNode {
 }
 
 // FromArray creates a ListNode from a given array
-func FromArray(arr []interface{}) (*ListNode) {
+func FromArray(arr []interface{}) *ListNode {
 	node := &ListNode{}
 	p := node
 	for _, e := range arr {
-		p.Next = &ListNode{Value:e}
+		p.Next = &ListNode{Value: e}
 		p = p.Next
 	}
 	return node.Next
 }
 
 // AdvanceNode advances the node for n steps
-func AdvanceNode(l *ListNode, n int) *ListNode{
+func AdvanceNode(l *ListNode, n int) *ListNode {
 	for n > 0 {
 		l = l.Next
 		n--

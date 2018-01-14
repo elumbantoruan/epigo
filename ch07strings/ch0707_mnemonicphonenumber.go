@@ -14,7 +14,7 @@ func MnemonicPhoneNumber(s string) []string {
 	return ms
 }
 
-func BuildMnemonicPhoneNumber(digits []rune, index int, partialMnemonics []rune, mnemonics []string) []string{
+func BuildMnemonicPhoneNumber(digits []rune, index int, partialMnemonics []rune, mnemonics []string) []string {
 	if index == len(digits) {
 		return append(mnemonics, string(partialMnemonics))
 	} else {

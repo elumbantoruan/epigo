@@ -9,14 +9,14 @@ func BuildBSTFromSortedList(list []int) *TreeNode {
 	return buildBSTFromSortedList(list, 0, len(list))
 }
 
-func buildBSTFromSortedList(list []int, start, end int) *TreeNode{
+func buildBSTFromSortedList(list []int, start, end int) *TreeNode {
 	if start >= end {
 		return nil
 	}
 
-	mid := start + (end - start) / 2
-	tree := &TreeNode{Value:list[mid]}
+	mid := start + (end-start)/2
+	tree := &TreeNode{Value: list[mid]}
 	tree.Left = buildBSTFromSortedList(list, start, mid)
-	tree.Right = buildBSTFromSortedList(list, mid + 1, end)
+	tree.Right = buildBSTFromSortedList(list, mid+1, end)
 	return tree
 }

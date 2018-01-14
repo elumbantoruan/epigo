@@ -1,13 +1,13 @@
 package ch07strings
 
 import (
-	"unicode"
 	"strings"
+	"unicode"
 )
 
 func IsStringPalindrome(s string) bool {
 	start := 0
-	end := len(s) -1
+	end := len(s) - 1
 	s = strings.ToLower(s)
 	runes := []rune(s)
 

@@ -8,7 +8,7 @@ func FindTheNearestRepeatedEntries(words []string) int {
 	nearestIndex := len(words)
 	for i := 0; i < len(words); i++ {
 		if v, ok := entriesIndex[words[i]]; ok {
-			nearestIndex = min(nearestIndex, i - v)
+			nearestIndex = min(nearestIndex, i-v)
 		}
 		entriesIndex[words[i]] = i
 	}
