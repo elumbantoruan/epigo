@@ -1,8 +1,8 @@
 package ch07strings
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 // Encoding encodes repeated characters

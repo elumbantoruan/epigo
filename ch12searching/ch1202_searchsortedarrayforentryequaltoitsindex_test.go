@@ -1,8 +1,8 @@
 package ch12searching
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 //{-2, 0, 2, 3, 6, 7, 9}

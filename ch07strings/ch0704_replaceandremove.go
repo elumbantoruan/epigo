@@ -20,14 +20,14 @@ func ReplaceAndRemove(runes []rune) {
 
 	// backward iteration, replace 'a' with two 'd' from the end
 	currentIndex := writeIdx - 1
-	writeIdx += aCount -1
+	writeIdx += aCount - 1
 
 	for i := currentIndex; i >= 0; i-- {
 		if runes[i] == 'a' {
 			runes[writeIdx] = 'd'
-			writeIdx --
+			writeIdx--
 			runes[writeIdx] = 'd'
-			writeIdx --
+			writeIdx--
 		} else {
 			runes[writeIdx] = runes[i]
 			writeIdx--

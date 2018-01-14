@@ -11,7 +11,7 @@ package ch06arrays
 func DutchNationalFlag(colors []Color, pivotIndex int) {
 	i := 0
 	j := 0
-	n := len(colors) -1
+	n := len(colors) - 1
 
 	pivot := colors[pivotIndex]
 
@@ -22,7 +22,7 @@ func DutchNationalFlag(colors []Color, pivotIndex int) {
 			j++
 		} else if colors[j] == pivot {
 			j++
-		} else {  // colors[equal] > pivot
+		} else { // colors[equal] > pivot
 			swap(colors, j, n)
 			n--
 		}
@@ -37,7 +37,7 @@ func DutchNationalFlagWithoutPivot(colors []Color) {
 
 	for j < n {
 		if colors[j] == Red {
-			swap(colors,i,j)
+			swap(colors, i, j)
 			i++
 			j++
 		} else if colors[j] == White {
@@ -57,7 +57,7 @@ func swap(colors []Color, a, b int) {
 type Color int
 
 const (
-	Red 	Color = iota
+	Red Color = iota
 	White
 	Blue
 )

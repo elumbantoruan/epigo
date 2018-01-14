@@ -1,4 +1,4 @@
-package ch15binarysearchtree
+package ch10tree
 
 import (
 	"github.com/stretchr/testify/assert"

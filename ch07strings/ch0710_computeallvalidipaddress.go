@@ -14,14 +14,14 @@ func GetAllValidIPAddress(s string) []string {
 		first := s[0:i]
 		if isValidPart(first) {
 			for j := 1; j < len(s) && j < 4; j++ {
-				second := s[i: i + j]
+				second := s[i : i+j]
 				if isValidPart(second) {
 					for k := 1; k < len(s) && k < 4; k++ {
-						if i + j + k < len(s) {
-							third := s[i + j: i + j + k]
-							forth := s[i + j + k:]
+						if i+j+k < len(s) {
+							third := s[i+j : i+j+k]
+							forth := s[i+j+k:]
 							if isValidPart(third) && isValidPart(forth) {
-								results = append(results, first + "." + second + "." + third + "." + forth)
+								results = append(results, first+"."+second+"."+third+"."+forth)
 							}
 						}
 					}
@@ -43,6 +43,6 @@ func isValidPart(s string) bool {
 	if v > 255 {
 		return false
 	}
- 	return true
+	return true
 
 }

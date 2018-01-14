@@ -9,7 +9,7 @@ func SearchForFirstOccurenceOfK(numbers []int, k int) int {
 	floor := 0
 	ceiling := len(numbers) - 1
 	for floor <= ceiling {
-		mid := floor + (ceiling - floor) / 2
+		mid := floor + (ceiling-floor)/2
 		if numbers[mid] == k {
 			index = mid
 			ceiling = mid - 1

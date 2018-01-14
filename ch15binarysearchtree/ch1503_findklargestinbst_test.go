@@ -1,12 +1,12 @@
 package ch15binarysearchtree
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestFindKLargestInBST(t *testing.T) {
-	tree := &TreeNode{Value:19}
+	tree := &TreeNode{Value: 19}
 	tree.Insert(7)
 	tree.Insert(3)
 	tree.Insert(2)

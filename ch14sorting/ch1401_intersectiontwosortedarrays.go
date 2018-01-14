@@ -8,7 +8,7 @@ func IntersectionTwoSortedArrays(l1, l2 []int) []int {
 	l1start := 0
 	l1end := len(l1) - 1
 	l2start := 0
-	l2end := len(l2) -1
+	l2end := len(l2) - 1
 
 	results := make(map[int]int)
 

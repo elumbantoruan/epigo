@@ -10,15 +10,15 @@ func Encoding(s string) string {
 	count := 1
 	runes := []rune(s)
 	for i := 1; i < len(runes); i++ {
-		if runes[i] == runes[i -1] {
+		if runes[i] == runes[i-1] {
 			count++
 		} else if runes[i] != runes[i-1] {
-			result = append(result, rune(count + '0'))
-			result = append(result, runes[i - 1])
+			result = append(result, rune(count+'0'))
+			result = append(result, runes[i-1])
 			count = 1
 		}
-		if i == len(runes) - 1{
-			result = append(result, rune(count + '0'))
+		if i == len(runes)-1 {
+			result = append(result, rune(count+'0'))
 			result = append(result, runes[i])
 		}
 	}
@@ -42,4 +42,3 @@ func Decoding(s string) string {
 	}
 	return string(result)
 }
-

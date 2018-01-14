@@ -1,13 +1,13 @@
 package ch05primitivetypes
 
 import (
-	"testing"
 	"fmt"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestReverseDigit(t *testing.T) {
-	n:= 23
+	n := 23
 	reversed := ReverseDigit(n)
 	assert.Equal(t, 32, reversed)
 }

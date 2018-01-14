@@ -3,7 +3,7 @@ package ch08linkedlists
 // OverlappingLists identifies the overlap node between the two nodes
 // Time complexity is O(n)
 // Space complexity is O(1)
-func OverlappingLists (l1 *ListNode, l2 *ListNode) *ListNode {
+func OverlappingLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	len1 := l1.Length()
 	len2 := l2.Length()
 

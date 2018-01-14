@@ -21,12 +21,12 @@ func BuyAndSellStockTwice(prices []int) int {
 		minPrice = int(math.Min(float64(minPrice), float64(prices[i])))
 	}
 
-	for i := len(prices) - 1; i > 0 ; i-- {
+	for i := len(prices) - 1; i > 0; i-- {
 		maxPrice = int(math.Max(float64(maxPrice), float64(prices[i])))
 		// calculate the potential profit by getting the difference between maxPrice and current index price plus the profit from the first buy
 		// do firstBuyProfits[i - 1] so it returns a previous profit from current price
-		potentialProfit = maxPrice - prices[i] + firstBuyProfits[i - 1]
-		maxProfit = int(math.Max(float64(maxProfit), float64( potentialProfit)))
+		potentialProfit = maxPrice - prices[i] + firstBuyProfits[i-1]
+		maxProfit = int(math.Max(float64(maxProfit), float64(potentialProfit)))
 	}
 	return maxProfit
 

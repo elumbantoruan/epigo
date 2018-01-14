@@ -22,12 +22,12 @@ func AddListBasedIntegers(l1, l2 *ListNode) *ListNode {
 		}
 		sum += carryOver
 		carryOver = sum / 10
-		ni.Next = &ListNode{Value:sum % 10}
+		ni.Next = &ListNode{Value: sum % 10}
 		ni = ni.Next
 	}
 
 	if carryOver > 0 {
-		ni.Next = &ListNode{Value:carryOver}
+		ni.Next = &ListNode{Value: carryOver}
 		ni = ni.Next
 	}
 

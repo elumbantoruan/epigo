@@ -1,12 +1,12 @@
 package ch15binarysearchtree
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestRangeLookup(t *testing.T) {
-	tree := &TreeNode{Value:19}
+	tree := &TreeNode{Value: 19}
 	tree.Insert(7)
 	tree.Insert(3)
 	tree.Insert(2)
@@ -24,8 +24,8 @@ func TestRangeLookup(t *testing.T) {
 	tree.Insert(47)
 	tree.Insert(53)
 
-	results := RangeLookup(tree, Interval{3,17})
-	expected := []int{3,5,7,11,13,17}
+	results := RangeLookup(tree, Interval{3, 17})
+	expected := []int{3, 5, 7, 11, 13, 17}
 	for i, r := range results {
 		assert.Equal(t, expected[i], r)
 	}

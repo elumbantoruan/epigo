@@ -7,7 +7,7 @@ package ch06arrays
 func DeleteDuplicatesFromSortedArray(numbers []int) int {
 	writeIdx := 1
 	for i := 1; i < len(numbers); i++ {
-		if numbers[i - 1] != numbers[i] {
+		if numbers[i-1] != numbers[i] {
 			numbers[writeIdx] = numbers[i]
 			writeIdx++
 		}

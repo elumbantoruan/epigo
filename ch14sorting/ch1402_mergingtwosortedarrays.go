@@ -19,7 +19,7 @@ func MergingTwoSortedArrays(l1 []int, m int, l2 []int, n int) {
 			l1[widx] = l2[nidx]
 			nidx--
 		}
-		widx --
+		widx--
 	}
 
 	for nidx >= 0 {

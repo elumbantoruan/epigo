@@ -1,9 +1,9 @@
 package ch05primitivetypes
 
 import (
-	"testing"
-	"github.com/stretchr/testify/assert"
 	"fmt"
+	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestIsPalindrome(t *testing.T) {

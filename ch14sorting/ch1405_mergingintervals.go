@@ -7,7 +7,7 @@ import (
 
 type Interval struct {
 	Start int
-	End int
+	End   int
 }
 
 // MergingInterval merges existing sorted intervals with a new one
@@ -49,7 +49,7 @@ func MergingInterval(existingIntervals []Interval, newInterval Interval) []*Inte
 	merged := []*Interval{}
 	merged = append(merged, &combined[0])
 	for i := 1; i < len(combined); i++ {
-		last := merged[len(merged) -1]
+		last := merged[len(merged)-1]
 		if last.End >= combined[i].Start {
 			last.Start = int(math.Min(float64(last.Start), float64(combined[i].Start)))
 			last.End = int(math.Max(float64(last.End), float64(combined[i].End)))

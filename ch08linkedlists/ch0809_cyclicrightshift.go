@@ -35,7 +35,7 @@ func CyclicRightShift(l *ListNode, k int) *ListNode {
 	newTail := tail
 	for shift > 0 {
 		newTail = newTail.Next
-		shift --
+		shift--
 	}
 	// newHead points to newTail.Next as a new head of list
 	newHead := newTail.Next
@@ -43,6 +43,5 @@ func CyclicRightShift(l *ListNode, k int) *ListNode {
 	newTail.Next = nil
 
 	return newHead
-
 
 }
