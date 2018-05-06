@@ -56,7 +56,7 @@ func (t TreeNode) toInOrderList(list []int) []int {
 	return list
 }
 
-// ToPreOrderList populates list with preorder traversal tree
+// ToPreOrderList populates list with preorder traversal tree.
 func (t TreeNode) ToPreOrderList() []int {
 	var list []int
 	list = t.toPreOrderList(list)
