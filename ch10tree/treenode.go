@@ -2,12 +2,14 @@ package ch10tree
 
 import "fmt"
 
+// TreeNode ...
 type TreeNode struct {
 	Value int
 	Left  *TreeNode
 	Right *TreeNode
 }
 
+// Insert inserts a new node into tree
 func (t *TreeNode) Insert(v int) {
 	if v < t.Value {
 		if t.Left == nil {
@@ -36,6 +38,7 @@ func (t TreeNode) PrintInOrder() {
 	}
 }
 
+// ToInOrderList populate list with inorder traversal tree
 func (t TreeNode) ToInOrderList() []int {
 	var list []int
 	t.toInOrderList(list)
@@ -53,6 +56,7 @@ func (t TreeNode) toInOrderList(list []int) []int {
 	return list
 }
 
+// ToPreOrderList populates list with preorder traversal tree
 func (t TreeNode) ToPreOrderList() []int {
 	var list []int
 	list = t.toPreOrderList(list)
