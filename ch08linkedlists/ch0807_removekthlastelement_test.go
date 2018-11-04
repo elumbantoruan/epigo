@@ -1,8 +1,9 @@
 package ch08linkedlists
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestRemoveKthLastElement(t *testing.T) {
@@ -13,7 +14,9 @@ func TestRemoveKthLastElement(t *testing.T) {
 	k := 4
 	r := RemoveKthLastElement(l, k)
 
-	r.Print()
-	assert.True(t, r != nil, "result should not be nil")
+	actual := r.ToArray()
+	expected := []interface{}{1, 2, 3, 4, 6, 7, 8}
+
+	assert.Equal(t, expected, actual)
 
 }
