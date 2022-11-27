@@ -2,31 +2,30 @@ package ch06arrays
 
 // PlusOne adds one to the values of integer array
 // For example: []int { 9, 8 } will be { 9, 9 }
-//				[]int { 9, 9 } will be { 1, 0, 0 }
-func PlusOne(i []int) []int {
-	i[len(i)-1] += 1
-	if i[len(i)-1] < 9 {
-		return i
+//
+//	[]int { 9, 9 } will be { 1, 0, 0 }
+func PlusOne(nums []int) []int {
+	n := len(nums) - 1
+	nums[n] += 1
+	if nums[n] < 10 {
+		return nums
 	}
 
 	carryOver := 0
-	for n := len(i) - 1; n >= 0; n-- {
-		sum := carryOver + i[n]
+	for n := len(nums) - 1; n >= 0; n-- {
+		sum := carryOver + nums[n]
 		if sum > 9 {
-			i[n] = 0
+			nums[n] = 0
 			carryOver = 1
 		} else {
-			i[n] = sum
+			nums[n] = sum
 			carryOver = 0
 		}
 	}
 
 	if carryOver == 1 {
-		r := make([]int, len(i)+1)
-		r[0] = 1
-		copy(r[1:], i)
-		return r
+		nums = append([]int{1}, nums...)
 	}
 
-	return i
+	return nums
 }
